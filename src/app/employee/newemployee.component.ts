@@ -23,14 +23,10 @@ import {
   @Component({
     selector: 'addemp',
     templateUrl: './newemployee.component.html',
-    //   template: `
-    //     <div>HELLO</div>
-    //   `,
     styleUrls: ['./newemployee.component.css']
   })
   export class AddEmployeeComponent implements OnInit {
   
-    private date:number
     private data : string
     private newtable: Employee[]
     private hide = true
@@ -51,7 +47,6 @@ import {
       this.data = localStorage.getItem("employee")
       this.newtable = JSON.parse(this.data)
       this.employeeData.id = Date.now();
-      //this.employeeData.id = parseInt(Date.now())
     }
 
     submit(data){
